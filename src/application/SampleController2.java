@@ -92,68 +92,16 @@ public class SampleController2 implements Initializable {
     	tableUser.setItems(listM);
     }
     
-	public void testF(ActionEvent event) {
-		System.out.println("dshfkdshfkdsfkjs");
-	}
-	
-	public void enter(ActionEvent e) throws IOException {
-		try  {
-		      Connection con=DBConnection.getConnection();
-		      PreparedStatement pst=con.prepareStatement("SELECT * FROM user WHERE name=? AND password=?");
-		      
-		      pst.setString(1,textName.getText());
-		      pst.setString(2,textPassword.getText());
-		      
-		      ResultSet result=pst.executeQuery();
-		 				 		
-		      if (result.next()) {
-		    	  	print("Успішно", "Title");
-//		    	  	switch2(e);
-		      } else print("Помилка", "Title");
-		      
-	       } catch (SQLException e1) { e1.printStackTrace(); }
-	}
-	
-//	public void switch1(ActionEvent event) throws IOException {
-//		root = FXMLLoader.load(getClass().getResource("Sample.fxml"));
-//		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-//		scene = new Scene(root);
-//	    scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());  // Apply styles
-//
-//		stage.setScene(scene);
-//		stage.show();
-//	}
-//	
-//	public void switch2(ActionEvent event) throws IOException {
-//		root = FXMLLoader.load(getClass().getResource("Sample2.fxml"));
-//		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-//		scene = new Scene(root);
-//	    scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());  // Apply styles
-//
-//		stage.setScene(scene);
-//		stage.show();
-//	}
-//	
-	public void click(ActionEvent event){
-        print(textName.getText(), "window");
-        try  {
-		      Connection con=DBConnection.getConnection();
-		      PreparedStatement pst=con.prepareStatement("INSERT INTO testtable(word) VALUES (?);");
-		      
-		      pst.setString(1, textName.getText());
-	
-		      
-		      int rowCount = pst.executeUpdate();
-		      
 
-		      
-	       } catch (SQLException e) { e.printStackTrace(); }
-    }
-    private void print(String contentText, String title) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(contentText);
-        alert.showAndWait();
-    }
+	public void switch1(ActionEvent event) throws IOException {
+		root = FXMLLoader.load(getClass().getResource("Sample.fxml"));
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+	    scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());  // Apply styles
+
+		stage.setScene(scene);
+		stage.show();
+	}
+		
+
 }

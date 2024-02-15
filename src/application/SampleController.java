@@ -49,47 +49,10 @@ public class SampleController implements Initializable {
 	@FXML
 	private Button btnEnter;
 	
-//	@FXML
-//	private Button testBtn;
-//	
-//	@FXML
-//	private Button click;
-//	
-//	@FXML
-//	private ImageView myImage;
-//	
-//	@FXML
-//    private TableView<Users> tableUser;
-//	
-//    @FXML
-//    private TableColumn<Users, String> colName;
-//    
-//    @FXML
-//    private TableColumn<Users, String> colPassword;
-//    
-//    @FXML
-//    private TableColumn<Users, String> colEmail;
-//    
-//    @FXML
-//    private TableColumn<Users, String> colContact;
-//
-//    
-//    ObservableList<Users> listM;
-//    int index = -1;
-//    
-//    Connection con = null;
-//    ResultSet rs = null;
-//    PreparedStatement pst = null;
-//    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-//    	colName.setCellValueFactory(new PropertyValueFactory<Users, String>("name"));
-//    	colPassword.setCellValueFactory(new PropertyValueFactory<Users, String>("password"));
-//    	colEmail.setCellValueFactory(new PropertyValueFactory<Users, String>("email"));
-//    	colContact.setCellValueFactory(new PropertyValueFactory<Users, String>("contact"));
-//    	
-//    	listM = DBConnection.getDataUsers();
-//    	tableUser.setItems(listM);
+
     }
     
 	public void testF(ActionEvent event) {
@@ -112,16 +75,6 @@ public class SampleController implements Initializable {
 		      } else print("Помилка", "Title");
 		      
 	       } catch (SQLException e1) { e1.printStackTrace(); }
-	}
-	
-	public void switch1(ActionEvent event) throws IOException {
-		root = FXMLLoader.load(getClass().getResource("Sample.fxml"));
-		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-		scene = new Scene(root);
-	    scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());  // Apply styles
-
-		stage.setScene(scene);
-		stage.show();
 	}
 	
 	public void switch2(ActionEvent event) throws IOException {
