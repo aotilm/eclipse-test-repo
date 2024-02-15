@@ -1,28 +1,37 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 .root {
-    -fx-background-color: linear-gradient(to bottom, black, white);
+    -fx-background-color: white;
 }
 
+.labelGoBack{
+	-fx-text-fill: gray;
+}
 
-
-.label{
-	-fx-text-fill: white;
+.labelGoBack:hover{
+	-fx-text-fill: black;
 }
 
 .button{
-	-fx-background-color: white;
-	-fx-background-radius: 100;
+	-fx-background-color: #431FA0;
+	-fx-text-fill: white;
 }
 .button:hover {
-    -fx-background-color: gray;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 2);
-    -fx-border-width: 2px;
-    -fx-border-color: violet;
-    -fx-border-radius: 100;
-    -fx-scale-x: 1.2;
-    -fx-scale-y: 1.2;
+	-fx-text-fill: #6F4CBB;
  
 }
+
+.button2{
+	-fx-background-color: #D5CBEB;
+	-fx-background-radius: 5;
+	-fx-text-fill: #371897;
+	-fx-border-color: #6F4CBB;
+	-fx-border-radius: 5; 
+}
+.button2:hover {
+	-fx-text-fill: #E4EEFD;
+ 
+}
+
 
 .table-view .column-header .label {
     -fx-text-fill: violet;
